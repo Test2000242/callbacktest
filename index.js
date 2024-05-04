@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const port = 8005;
 
+app.use(express.json())
+
 // Define a route for the root URL
 app.get('/', (req, res) => {
   res.send('Hello, World!');
