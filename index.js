@@ -10,6 +10,7 @@ app.get('/', (req, res) => {
 // Define a route with query parameters
 app.post('/social/callback/success', (req, res) => {
         console.log(req.body);
+        console.log(req);
         res.send(`<script>window.opener.postMessage(${JSON.stringify(req.body)}, '*');</script>`);
     });
 
